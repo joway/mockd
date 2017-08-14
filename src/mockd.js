@@ -38,7 +38,13 @@ const main = () => {
     }
     fs.writeFileSync(PROXY_MAP_FILE, JSON.stringify(proxyMap), 'utf-8')
   }
-  const server = http.createServer(handle).listen(LISTEN_PORT, LISTEN_HOST)
+
+  try {
+    const server = http.createServer(handle).listen(LISTEN_PORT, LISTEN_HOST)
+  } catch (e) {
+    console.info('use : sudo mockd ')
+  }
+  console.log('proxy server running')
 }
 
 main()

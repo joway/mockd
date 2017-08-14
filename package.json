@@ -1,6 +1,6 @@
 {
   "name": "mockd",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "mock domain tool",
   "main": "mockd.js",
   "scripts": {

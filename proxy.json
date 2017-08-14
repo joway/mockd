@@ -1,4 +1,6 @@
 {
   "auth.ruguoapp.com": "http://auth.ruguoapp.com",
-  "test.ruguoapp.com": "http://127.0.0.1:8080"
+  "test.ruguoapp.com": "http://127.0.0.1:8080",
+  "akc": "http://127.0.0.1:8002",
+  "kd": "http://127.0.0.1:8001"
 }

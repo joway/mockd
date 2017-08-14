@@ -1,10 +1,15 @@
 {
   "name": "mockd",
-  "version": "1.0.0",
-  "description": "mock domain",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "mock domain tool",
+  "main": "mockd.js",
   "scripts": {
-    "start": "nodemon server.js --exec babel-node"
+    "start": "npm run build && node bin/mockd.js",
+    "dev": "nodemon src/mockd.js --exec babel-node",
+    "build": "babel src -d bin"
+  },
+  "bin": {
+    "mockd": "./bin/mockd.js"
   },
   "repository": {
     "type": "git",

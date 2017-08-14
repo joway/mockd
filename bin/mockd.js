@@ -52,7 +52,13 @@ var main = function main() {
     }
     _fs2.default.writeFileSync(PROXY_MAP_FILE, JSON.stringify(proxyMap), 'utf-8');
   }
-  var server = _http2.default.createServer(handle).listen(LISTEN_PORT, LISTEN_HOST);
+
+  try {
+    var server = _http2.default.createServer(handle).listen(LISTEN_PORT, LISTEN_HOST);
+  } catch (e) {
+    console.info('use : sudo mockd ');
+  }
+  console.log('proxy server running');
 };
 
 main();
